@@ -9,9 +9,9 @@
 
 // Configuration - Update these values as needed
 $config = [
-    'vendor_package' => 'afatmustafa/blade-hugeicons', // Change this to your actual package
-    'icon_set_name' => 'Hugeicons', // Change this to your icon set name
-    'enum_file' => 'src/Enums/Hugeicons.php', // Change this to your enum file path
+    'vendor_package' => 'codeat3/blade-solar-icons', // Change this to your actual package
+    'icon_set_name' => 'Solar', // Change this to your icon set name
+    'enum_file' => 'src/Enums/Solar.php', // Change this to your enum file path
 ];
 
 echo "🔍 Icon Updater Script\n";
