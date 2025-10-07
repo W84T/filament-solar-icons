@@ -58,38 +58,38 @@ If you need to override certain icons to use a different style, you can use eith
 Use the `overrideStyleForAlias` method with a [Filament Icon Alias](https://filamentphp.com/docs/4.x/styling/icons#available-icon-aliases). This method works with either a single icon key (string) or multiple icon keys (array).
 
 ```php
-use W84T\Icons\Solar Icons\Solar IconsIcons;
-use W84T\Icons\Solar Icons\Enums\Solar IconsStyle;
+use W84T\Icons\SolarIcons\SolarIcons;
+use W84T\Icons\SolarIcons\Enums\SolarStyle;
 use Filament\Tables\View\TablesIconAlias;
 use Filament\Actions\View\ActionsIconAlias;
 
 // Override a single icon key
-Solar IconsIcons::make()->overrideStyleForAlias(TablesIconAlias::ACTIONS_FILTER, Solar IconsStyle::Bold);
+SolarIcons::make()->overrideStyleForAlias(TablesIconAlias::ACTIONS_FILTER, Solar IconsStyle::Bold);
 
 // Override multiple icon keys at once
-Solar IconsIcons::make()->overrideStyleForAliases([
-    TablesIconAlias::COLUMNS_ICON_COLUMN_TRUE => Solar IconsStyle::Bold,
-    TablesIconAlias::COLUMNS_ICON_COLUMN_FALSE => Solar IconsStyle::Light,
-    ActionsIconAlias::MODAL_CLOSE_BUTTON => Solar IconsStyle::Regular,
+SolarIcons::make()->overrideStyleForAliases([
+    TablesIconAlias::COLUMNS_ICON_COLUMN_TRUE => SolarStyle::Bold,
+    TablesIconAlias::COLUMNS_ICON_COLUMN_FALSE => SolarStyle::Light,
+    ActionsIconAlias::MODAL_CLOSE_BUTTON => SolarStyle::Regular,
 ]);
 ```
 
 ### Using icon enum cases
-Use the `overrideStyleForIcon` method with a Solar Icons icon enum case:
+Use the `overrideStyleForIcon` method with a Solar enum case:
 
 ```php
-use W84T\Icons\Solar Icons\Solar IconsIcons;
-use W84T\Icons\Solar Icons\Enums\Solar Icons;
-use W84T\Icons\Solar Icons\Enums\Solar IconsStyle;
+use W84T\Icons\SolarIcons\SolarIcons;
+use W84T\Icons\SolarIcons\Enums\Solar;
+use W84T\Icons\SolarIcons\Enums\SolarStyle;
 
 // Override a specific icon
-Solar IconsIcons::make()->overrideStyleForIcon(Solar Icons::Check, Solar IconsStyle::Bold);
+SolarIcons::make()->overrideStyleForIcon(Solar::Check, SolarStyle::Bold);
 
 // Override multiple icons at once
-Solar IconsIcons::make()->overrideStyleForIcons([
-    Solar Icons::Check => Solar IconsStyle::Bold,
-    Solar Icons::X => Solar IconsStyle::Light,
-    Solar Icons::ArrowRight => Solar IconsStyle::Regular,
+SolarIcons::make()->overrideStyleForIcons([
+    Solar::Check => SolarStyle::Bold,
+    Solar::X => SolarStyle::Light,
+    Solar::ArrowRight => SolarStyle::Regular,
 ]);
 ```
 
@@ -106,12 +106,12 @@ use Filament\Tables\View\TablesIconAlias;
 use Filament\Actions\View\ActionsIconAlias;
 
 // Override a single alias
-Solar IconsIcons::make()->overrideAlias(TablesIconAlias::ACTIONS_FILTER, Solar Icons::FunnelSimple);
+SolarIcons::make()->overrideAlias(TablesIconAlias::ACTIONS_FILTER, Solar::FunnelSimple);
 
 // Override multiple aliases at once
-Solar IconsIcons::make()->overrideAliases([
-    TablesIconAlias::ACTIONS_FILTER => Solar Icons::FunnelSimple,
-    ActionsIconAlias::BUTTON_GROUP_DROPDOWN_INDICATOR => Solar Icons::CaretUpDown,
+SolarIcons::make()->overrideAliases([
+    TablesIconAlias::ACTIONS_FILTER => Solar::FunnelSimple,
+    ActionsIconAlias::BUTTON_GROUP_DROPDOWN_INDICATOR => Solar::CaretUpDown,
 ]);
 ```
 
@@ -121,18 +121,18 @@ use W84T\Icons\SolarIcons\SolarIcons;
 use W84T\Icons\SolarIcons\Enums\Solar;
 
 // Replace every instance of one icon with another
-Solar IconsIcons::make()->overrideIcon(Solar Icons::User, Solar Icons::UserCircle);
+SolarIcons::make()->overrideIcon(Solar::User,Solar::UserCircle);
 
 // Replace multiple icons at once
-Solar IconsIcons::make()->overrideIcons([
-    Solar Icons::User => Solar Icons::UserCircle,
-    Solar Icons::Heart => Solar Icons::HeartFilled,
+SolarIcons::make()->overrideIcons([
+    Solar::User => Solar::UserCircle,
+    Solar::Heart => Solar::HeartFilled,
 ]);
 ```
 
 ## Credits
 
-- [Solar Icons](https://example.com) for the icon library
+- [Solar Icons](https://github.com/codeat3/blade-solar-icons) for the icon library
 - [Filament Icons](https://github.com/filafly/filament-icons) for the base icon system
 
 ## License
