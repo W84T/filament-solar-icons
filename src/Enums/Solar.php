@@ -2,7 +2,10 @@
 
 namespace W84T\Icons\SolarIcons\Enums;
 
-enum Solar: string
+use Filament\Support\Contracts\ScalableIcon;
+use Filament\Support\Enums\IconSize;
+
+enum Solar: string implements ScalableIcon
 {
     case Icon4kBold = '4k-bold';
     case Icon4kBoldDuotone = '4k-bold-duotone';
@@ -7408,4 +7411,11 @@ enum Solar: string
     case ZipFileLineDuotone = 'zip-file-line-duotone';
     case ZipFileLinear = 'zip-file-linear';
     case ZipFileOutline = 'zip-file-outline';
+
+    public function getIconForSize(IconSize $size): string
+    {
+        return match ($size) {
+            default => "solar-$this->value",
+        };
+    }
 }
