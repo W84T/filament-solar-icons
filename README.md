@@ -17,40 +17,35 @@ composer require w84t/filament-solar-icons
 After the package is installed, you must register the plugin in your Filament Panel provider:
 
 ```php
- Icons\Solar IconsIcons;
+ use W84T\Icons\SolarIcons\SolarIcons;
 
 public function panel(Panel $panel): Panel
 {
     return $panel
-        ->plugin(Solar IconsIcons::make());
+        ->plugin(SolarIcons::make());
 }
 ```
 
-<!--
+
 ## Setting the global icon style
 
 Solar Icons icons come in multiple styles that you can switch between. Available styles include:
 
-- Regular (default)
-- Bold
-- Light
-- - Bold (default)
-- Bold-duotone
-- Broken
-- Line-duotone
-- Linear
+
 - Outline
+- Broken
+- Linear
+- Bold
+- Bold-duotone
+- Line-duotone
 
 You can change the style using the following methods:
 
 ```php
-Solar IconsIcons::make()->regular();
-Solar IconsIcons::make()->bold();
-Solar IconsIcons::make()->light();
 SolarIcons::make()->bold();
-SolarIcons::make()->bold-duotone();
+SolarIcons::make()->bold_duotone();
 SolarIcons::make()->broken();
-SolarIcons::make()->line-duotone();
+SolarIcons::make()->line_duotone();
 SolarIcons::make()->linear();
 SolarIcons::make()->outline();
 ```
@@ -105,8 +100,8 @@ You can change which icon is used for any given Filament alias:
 
 ### Using icon aliases
 ```php
-use W84T\Icons\Solar Icons\Solar IconsIcons;
-use W84T\Icons\Solar Icons\Enums\Solar Icons;
+use W84T\Icons\SolarIcons\SolarIcons;
+use W84T\Icons\SolarIcons\Enums\Solar;
 use Filament\Tables\View\TablesIconAlias;
 use Filament\Actions\View\ActionsIconAlias;
 
@@ -122,8 +117,8 @@ Solar IconsIcons::make()->overrideAliases([
 
 ### Using icon enum cases
 ```php
-use W84T\Icons\Solar Icons\Solar IconsIcons;
-use W84T\Icons\Solar Icons\Enums\Solar Icons;
+use W84T\Icons\SolarIcons\SolarIcons;
+use W84T\Icons\SolarIcons\Enums\Solar;
 
 // Replace every instance of one icon with another
 Solar IconsIcons::make()->overrideIcon(Solar Icons::User, Solar Icons::UserCircle);

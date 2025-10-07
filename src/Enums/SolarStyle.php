@@ -17,9 +17,9 @@ enum SolarStyle: string implements StyleEnum
     {
         return match ($this) {
             self::Bold => 'bold',
-            self::BoldDuotone => 'bold-duotone',
+            self::BoldDuotone => 'bold_duotone',
             self::Broken => 'broken',
-            self::LineDuotone => 'line-duotone',
+            self::LineDuotone => 'line_duotone',
             self::Linear => 'linear',
             self::Outline => 'outline',
         };
@@ -39,16 +39,16 @@ enum SolarStyle: string implements StyleEnum
 
     public static function getStyleNames(): array
     {
-        return ['bold', 'bold-duotone', 'broken', 'line-duotone', 'linear', 'outline'];
+        return ['bold', 'bold_duotone', 'broken', 'line_duotone', 'linear', 'outline'];
     }
 
     public static function fromStyleName(string $styleName): ?self
     {
         return match (strtolower($styleName)) {
             'bold' => self::Bold,
-            'bold-duotone' => self::BoldDuotone,
+            'bold_duotone' => self::BoldDuotone,
             'broken' => self::Broken,
-            'line-duotone' => self::LineDuotone,
+            'line_duotone' => self::LineDuotone,
             'linear' => self::Linear,
             'outline' => self::Outline,
             default => null,
